@@ -1,13 +1,13 @@
-const Search = ({ searchTerm, setSearchTerm }) => {
+const Search = ({ search, setSearch }) => {
   return (
     <div className="search">
         <div>
             <img src="search.svg" alt="search" />
             <input type="text"
-                placeholder="Search movies..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)} 
-             />
+                value={search}
+                placeholder="Search movies here..."
+                onChange={(e) => setSearch(e.target.value)}
+            />
         </div>
     </div>
   )

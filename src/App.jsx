@@ -2,7 +2,8 @@ import { useState } from 'react'
 import Search from './components/Search'
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState('')
+  const [search, setSearch] = useState('')
+
   return (
     <main>
       <div className='pattern' />
@@ -11,8 +12,8 @@ const App = () => {
           <img src="./hero-img.png" alt="Hero Banner" />
           <h1>Find <span className='text-gradient'>Movies</span> You love without stress</h1>
         </header>
-        <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-
+        <Search search={search} setSearch={setSearch} />
+        <h1 className='text-white text-3clarxl'>{search}</h1>
       </div>
 
     </main>
