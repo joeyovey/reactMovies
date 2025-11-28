@@ -20,8 +20,17 @@ const App = () => {
     try{
       const endpoint = `${API_BASE_URL}/discover/movie?sort_by=popularity.desc`;
 
-      const response = await fetch(endpoint, API_OPTIONS)
-
+      const response = await fetch(endpoint, API_OPTIONS);
+      
+      if(!response.ok){
+        throw new Error('Failed to fetch movies');
+      }
+      const data = await response.json();
+      console.log(data);
+      if(data.Response === 'false'){
+        setErrMsg(data.Error || 'Faile to fetch movies');
+      }
+      
     } catch (error){
       console.log(`Error fetching movies: ${error}`)
       setErrMsg('Error fetching movies, try again later')
@@ -29,7 +38,7 @@ const App = () => {
   }
 
   useEffect(()=>{
-
+    fetchMovies();
   }, [])
 
   return (
