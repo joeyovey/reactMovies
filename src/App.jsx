@@ -42,7 +42,7 @@ const App = () => {
       setMovieList(data.results || [])
     
     } catch (error){
-      console.log(`Error fetching movies: ${error}`)
+      // console.log(`Error fetching movies: ${error}`)
       setErrMsg('Error fetching movies, try again later')
     } finally {
       setLoading(false)
@@ -58,7 +58,7 @@ const App = () => {
       <div className='pattern' />
       <div className='wrapper'>
         <header>
-          <img src="./hero-img.png" alt="Hero Banner" />
+          {/* <img src="./hero-img.png" alt="Hero Banner" /> */}
           <h1>Find <span className='text-gradient'>Movies</span> You love without stress</h1>
           
           <Search search={search} setSearch={setSearch} />
