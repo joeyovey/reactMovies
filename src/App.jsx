@@ -67,7 +67,7 @@ const App = () => {
         </header>
 
         <section className='all-movies'>
-          <h2 className='mt-[40px]'>All movies</h2>
+          <h2 className='mt-40px'>All movies</h2>
           
           {isLoading ? (
            <Spinner />
