@@ -38,7 +38,7 @@ const App = () => {
           <h1>Find <span className='text-gradient'>Movies</span> You love without stress</h1>
         </header>
         <Search search={search} setSearch={setSearch} />
-        <h1 className='text-white text-3clarxl'>{search}</h1>
+      
       </div>
 
     </main>
