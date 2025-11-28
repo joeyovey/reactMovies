@@ -66,7 +66,18 @@ const App = () => {
 
         <section className='all-movies'>
           <h2>All movies</h2>
-          {errMsg && <p className='text-red-500'>{errMsg}</p>}
+          
+          {isLoading ? (
+            <p className='text-white'>Loading...</p>
+          ) : errMsg ?(
+            <p className='text-red-500'>{errMsg}</p>
+          ) :(
+            <ul>
+              {movieList.map((movie) =>(
+                <p className='text-white'>{movie.title}</p>
+              ))}
+            </ul>
+          )}
         </section>
       </div>
 
