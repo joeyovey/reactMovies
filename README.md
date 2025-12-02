@@ -1,16 +1,52 @@
-# React + Vite
+**🎬 Movie Search App**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that allows users to search for movies in real time using the TMDB API, with debounced input, loading indicators, and clean UI components.
 
-Currently, two official plugins are available:
+This project demonstrates:
+✔ Debounced search (using react-use)
+✔ API calls to TMDB with Fetch
+✔ Conditional rendering (loading, errors, results)
+✔ Reusable components (Search, MovieCard, Spinner)
+✔ Environment variable for API security
+✔ Clean React architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Features**
+1. Search for Movies: Users can type in the search bar and results will appear automatically.
 
-## React Compiler
+2. Debounced Input: The app waits 500ms after typing stops before fetching—prevents spam API calls.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. Movie List Display: Shows a list of movies with individual movie cards.
 
-## Expanding the ESLint configuration
+4. TMDB API Integration: Uses TMDB’s search and discover endpoints.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+5. Error Handling: Shows a message when the API fails or no movie is found.
+
+6. Loading Spinner: Displays a spinner while fetching data.
+
+src/
+│
+├── components/
+│   ├── Search.jsx
+│   ├── Spinner.jsx
+│   └── MovieCard.jsx
+│
+├── App.jsx
+└── main.jsx
+
+**Technologies Used**
+1. React
+2. Vite
+3. JavaScript (ES6)
+4. react-use (for debouncing)
+5. Tailwind CSS (optional, based on your classes)
+6. TMDB API
+
+**Running the Project Locally**
+1. Download or clone the repository: **https://github.com/joeyovey/reactMovies.git**
+2. npm install
+3. Create a .env file in your project root and add: *VITE_TMDB_API_KEY=your_tmdb_access_token_here* (Make sure it is your TMDB Bearer Token, not the normal API key).
+4. npm run dev
+5. http://localhost:5173
+
+
+
